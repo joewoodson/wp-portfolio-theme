@@ -13,7 +13,7 @@ var del         = require('del');
 
 // Enter URL of your local server here
 // Example: 'http://localwebsite.dev'
-var URL = '';
+var URL = 'localhost/amelie-wordpress';
 
 // Check for --production flag
 var isProduction = !!(argv.production);
@@ -250,7 +250,7 @@ gulp.task('default', ['build', 'browser-sync'], function() {
   }
 
   // Sass Watch
-  gulp.watch(['assets/scss/**/*.scss'], ['clean:css', 'sass'])
+  gulp.watch(['assets/scss/**/*.scss','assets/scss/**/*.sass'], ['clean:css', 'sass'])
     .on('change', function(event) {
       logFileChange(event);
     });
