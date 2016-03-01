@@ -1,17 +1,20 @@
+@import '../components/magnific-popup';
+
 #modeling-gallery {
 	margin-top: 3rem;
+	text-align: center;
 }
 
 
 /* CLEARFIX
 ----------------------------------------------- */
  
-.clearboth {
-    display: block;
-    margin: 0;
-    padding: 0;
-    clear: both;
-}
+// .clearboth {
+//     display: block;
+//     margin: 0;
+//     padding: 0;
+//     clear: both;
+// }
  
 /* PORTFOLIO FILTER STYLE
 ----------------------------------------------- */
@@ -38,9 +41,9 @@
 /* PORTFOLIO LIST STYLE
 ----------------------------------------------- */
  
-#portfolio-wrapper {
-    padding-bottom: 25px;
-}
+// #portfolio-wrapper {
+//     padding-bottom: 25px;
+// }
  
 #portfolio-list {
     list-style-type: none;
@@ -48,29 +51,11 @@
 }
  
 #portfolio-list .portfolio-item {
-    width: 400px;
-    float: left;
+    // width: 400px;
+    // float: left;
     margin-right: 5px;
 }
  
-#portfolio-list .portfolio-item h3 a {
-    color: #084a9a;
-    text-transform: uppercase;
-    font-weight: bold;
-}
- 
-#portfolio-list .portfolio-item .excerpt
-{
-    text-align: justify;
-    font-size: 14px;
-    line-height: 18px;
-    padding-right: 15px;
-    margin-bottom: 5px;
-}
- 
-#portfolio-list .portfolio-item .excerpt a {
-    color: #555;
-}
  
 #portfolio-list .portfolio-item .excerpt a:hover {
     text-decoration: none;

@@ -34,3 +34,11 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 
 	add_action( 'wp_enqueue_scripts', 'foundationpress_scripts' );
 endif;
+
+/* add support for Magnific lightbox */
+function enqueue_magnific() 
+{
+    wp_register_script( 'magnific', get_template_directory_uri() . '/assets/javascript/magnific.min.js', array( 'jquery' ) );
+    wp_enqueue_script( 'magnific' );
+}
+add_action('wp_enqueue_scripts', 'enqueue_magnific');
