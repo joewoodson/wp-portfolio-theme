@@ -13,16 +13,22 @@
 ?>
 
 
-<section class="row no-max pad">
+<section id="modeling-gallery" class="row no-max pad">
 
-  <?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
+    <header>
+        <h1 class="entry-title"><?php the_title(); ?></h1>
+    </header>
 
-  <div class="text-center small-6 medium-4 large-3 columns grid-item">
-    <?php the_post_thumbnail('thumbnail'); ?>
-  </div>
+    <?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
 
-<?php endwhile; endif; wp_reset_postdata(); ?>
+    <div class="modeling-thumb text-center small-6 medium-4 large-2 columns grid-item end">
+        <?php the_post_thumbnail('thumbnail'); ?>
+    </div>
+
+    <?php endwhile; endif; wp_reset_postdata(); ?>
 
 </section>
 
 <?php get_footer(); ?>
+
+
