@@ -1,10 +1,17 @@
 @import '../components/magnific-popup';
 
 #modeling-gallery {
-	margin-top: 3rem;
+	margin-top: 2rem;
 	text-align: center;
+	// height: 50rem;
 }
 
+@media (max-width: 1000px) {
+	#modeling-gallery {
+		margin-top: .8rem;
+		height: auto;
+	}
+}
 
 /* CLEARFIX
 ----------------------------------------------- */
@@ -25,37 +32,38 @@
  
 #portfolio-filter li {
     display: inline;
-    padding-right: 10px;
+    // padding-right: 18px;
+    &:not(:last-child):after {
+		content: " \2022  ";
+		color: $secondary-color;
+        font-size: 18px;
+	}
 }
- 
+
 #portfolio-filter li a {
-    color: #777;
+    color: $secondary-color;
+	font-family: $open-sans;
     text-decoration: none;
+    padding: 0 5px;
+    &:hover {
+    	color: $highlight-color;
+    }
+    
 }
  
-#portfolio-filter li .current,
-#portfolio-filter li:hover {
-    color: #084a9a;
+#portfolio-filter li .current{
+    color: $highlight-color !important;
 }
  
 /* PORTFOLIO LIST STYLE
------------------------------------------------ */
- 
-// #portfolio-wrapper {
-//     padding-bottom: 25px;
-// }
- 
+----------------------------------------------- */ 
 #portfolio-list {
     list-style-type: none;
- 
 }
  
 #portfolio-list .portfolio-item {
-    // width: 400px;
-    // float: left;
     margin-right: 5px;
 }
- 
  
 #portfolio-list .portfolio-item .excerpt a:hover {
     text-decoration: none;

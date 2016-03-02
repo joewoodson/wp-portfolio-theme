@@ -63,7 +63,7 @@ get_header(); ?>
                         <?php $infos = get_post_custom_values('_url'); ?>
                          
                         <li class="portfolio-item <?php echo strtolower($tax); ?> all">
-                            <div class="modeling-thumb text-center small-6 medium-4 large-2 columns grid-item end"><a class="image-link" href="<?php $src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full', false ); echo $src[0]; ?>"><?php the_post_thumbnail('thumbnail'); ?></a></div>
+                            <div class="modeling-thumb text-center small-6 medium-4 large-3 columns grid-item end"><a class="image-link" href="<?php $src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full', false ); echo $src[0]; ?>"><?php the_post_thumbnail('thumbnail'); ?></a></div>
                         </li>
                          
                     <?php endwhile; else: ?>
@@ -82,7 +82,12 @@ get_header(); ?>
             <script>
                 jQuery(document).ready(function() { 
                     jQuery("#portfolio-list").filterable();
-                    jQuery('.image-link').magnificPopup({type:'image'});
+                    jQuery('.image-link').magnificPopup({
+                        type:'image',
+                        gallery: {
+                            enabled: true
+                        }
+                    });
                 });
             </script>
              

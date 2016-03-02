@@ -7,7 +7,7 @@
 	jQuery.fn.filterable = function(settings) {
 		settings = jQuery.extend({
 			useHash: true,
-			animationSpeed: 1000,
+			animationSpeed: 0,
 			show: { width: 'show', height: 'show', opacity: 'show' },
 			hide: { width: 'hide', height: 'hide', opacity: 'hide' },
 			useTags: true,
